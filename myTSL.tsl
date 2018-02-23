@@ -1,0 +1,64 @@
+struct TripleSet
+{
+	string tripleType;
+	string subjectValue;
+	string predicateValue;
+	string objectValue;
+	string question;
+	string answer;
+	List<int> answerRelated;
+}
+struct Session
+{
+	List<TripleSet> session;
+}
+cell struct TrainingSet
+{
+	int taskIndex;
+	List<Session> SessionSet;
+}
+cell struct TestSet
+{
+	int taskIndex;
+	List<Session> SessionSet;
+}
+cell struct ValidSet
+{
+	int taskIndex;
+	List<Session> SessionSet;
+}
+cell struct PredicateSymbolDic
+{
+	string predicate;
+	string symbol;
+}
+cell struct VariableHistorical
+{
+	string variable;
+}
+struct QAUnit
+{
+	string unitContent;
+	string variableType;
+}
+struct TripleTermStruct
+{
+	string subjectValue;
+	string predicateValue;
+	string objectValue;
+}
+struct FactUnitStruct
+{	
+	List<TripleTermStruct> tripleList;
+}
+struct RuleStorageStruct
+{
+	int currentRuleSetFactCount;
+	List<FactUnitStruct> factExpression;
+}
+cell struct RuleUnitCell
+{
+	List<QAUnit> qaStructure;
+	List<RuleStorageStruct> factExpression;
+	int questionLength;
+}
